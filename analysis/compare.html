@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+		<title>Compare</title>
+	  <meta charset="UTF-8">
+	</head>
+	<body>
+		<div class="chart">
+			<canvas id="myChart" width="1174" height="587" style="display: block; width: 1174px; height: 587px;"></canvas>
+		</div>
+		<script>
+			let ctx = document.getElementById('myChart').getContext('2d');
+			const options = {
+				scales: {
+					  y: {
+						beginAtZero: true
+					  }
+					},
+							// other options
+					plugins: {
+						legend: {
+				  display: false
+				},
+						datalabels: {
+							anchor :'end',
+							align :'top',
+							// and if you need to format how the value is displayed...
+							formatter: function(value, context) {
+								return GetValueFormatted(value);
+							}
+							}
+							}
+			};
+
+			const labels = ['Confluence','Slab','Dcoument360','Outline','Nuclino'];    
+			const data = {
+			  labels: labels,
+			  datasets: [{
+				label: 'Software selection',
+				data: [90.70,90.70,82.50,74.60,69],
+				backgroundColor: [
+				  
+				  'rgba(0, 112, 0, 0.2)',
+				  'rgba(0, 112, 0, 0.2)',
+				  'rgba(220, 228, 0, 0.2)',
+				  'rgba(220, 129, 0, 0.2)',
+				  'rgba(220, 12, 0, 0.2)',
+				],
+				borderColor: [
+				  'rgba(0, 112, 0)',
+				  'rgba(0, 112, 0)',
+				  'rgb(220, 228, 0)',
+				  'rgb(220, 129, 0)',
+				  'rgb(220, 12, 0)'
+				],
+				borderWidth: 1
+			  }]
+			};
+			Chart.defaults.color = "#005366fc";
+			let chart = new Chart(ctx, {type: 'bar',data: data, options: options});
+		</script>
+	</body>
+</html>
