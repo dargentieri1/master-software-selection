@@ -1,24 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-		<title>Nuclino</title>
-	  <meta charset="UTF-8">
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+			<style>
+			@import url(https://fonts.googleapis.com/css?family=Raleway|Reenie+Beanie);
+
+			* {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				margin: 5%;
+				font-family: sans-serif;
+				line-height: 1.5em;
+				background: #f5f5f5;
+			}
+
+			img {
+				width: 100%;
+			}
+
+			a {
+				color: #000;
+			}
+
+			.caption,
+			h1 {
+				font-family: monospace;
+				font-size: 2em;
+				padding: 10px 10px 0 10px;
+			}
+
+			.date {
+				font-size: 0.75em;
+			}
+
+			.description {
+				font-size: 0.9em;
+				padding: 0 20px 20px 20px;
+				text-align: left;
+			}
+
+			.container {
+				perspective: 1000px;
+				display: inline-block;
+				margin: 3%;
+			}
+
+			.container:hover .flipper {
+				transform: rotateY(180deg);
+			}
+
+			.container,
+			.front,
+			.back {
+				width: 250px;
+				height: 250px;
+			}
+
+			.flipper {
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+
+			.front,
+			.back {
+				backface-visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 250px;
+				height: 250px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+							0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+			.front {
+				z-index: 2;
+			}
+
+			.back {
+				transform: rotateY(180deg);
+			}
+
+			#content {
+				text-align: center;
+			}
+			</style>
 	</head>
 	<body>
-  <section class="hero">
-    <div class="hero-body">
-		<div class="columns">
-			<div class="column is-2"></div>
-			<div class="column is-8">
-				<a href="nuclino.html">Nuclino</a>
+		<div id="content">
+			<div class="container">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://i.postimg.cc/0j7fX4CK/pngtree-powerpoint-clipart-creator-concept-man-present-diagram-on-white-easel-vector-png-image-68155.png" alt="img">
+						<p class="caption">Creator</p>
+					</div>
+					<div class="back">
+						<a href="#">
+							<h1>Creator</h1>
+						</a>
+						<p class="description">A creator is someone who makes, invents, or produces something.
+						</p>
+					</div>
+				</div>
 			</div>
-			<div class="column is-2"></div>
+
+			<div class="container">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://i.postimg.cc/j5cq6xpD/pngtree-web-development-concept-flat-design-png-image-2303316.jpg" alt="img">
+						<p class="caption">Model</p>
+					</div>
+					<div class="back">
+						<a href="#">
+							<h1>Model</h1>
+						</a>
+						<p class="description">A model structure is a network that exchanges information and is specific to a discipline.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://i.postimg.cc/tg0gpmd4/3d-nft-icon-developer-male-illustration-629802-6.avif" alt="img">
+						<p class="caption">Web Designer</p>
+					</div>
+					<div class="back">
+						<a href="#">
+							<h1>Web Designer</h1>
+						</a>
+						<p class="description">A web designer creates the visual elements and layout of websites and web pages.
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-  </section>
 	</body>
 </html>
