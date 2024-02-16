@@ -1,4 +1,4 @@
 # master-software-selection
 
 - [presentation](/presentation)
-- [analysis](/analysis)
+- [analysis](/analysis/index.html)
