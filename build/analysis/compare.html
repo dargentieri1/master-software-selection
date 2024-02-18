@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+	</head>
+	<body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+		  <a class="navbar-item" href="https://master-software-selection.onrender.com/">Torna al menu</a>
+		</div>
+    </nav>
+  <section class="hero">
+    <div class="hero-body">
+		<div class="columns">
+			<div class="column is-2"></div>
+			<div class="column is-8">
+				<div class="chart">
+					<canvas id="myChart" width="1174" height="587" style="display: block; width: 1174px; height: 587px;"></canvas>
+				</div>
+			</div>
+			<div class="column is-2"></div>
+		</div>
+	</div>
+  </section>
+		<script>
+			let ctx = document.getElementById('myChart').getContext('2d');
+			const options = {
+				scales: {
+					  y: {
+						beginAtZero: true
+					  }
+					},
+							// other options
+					plugins: {
+						legend: {
+				  display: false
+				},
+						datalabels: {
+							anchor :'end',
+							align :'top',
+							// and if you need to format how the value is displayed...
+							formatter: function(value, context) {
+								return GetValueFormatted(value);
+							}
+							}
+							}
+			};
+
+			const labels = ['Nuclino','Confluence','Sharepoint','Google Drive'];
+			const data = {
+			  labels: labels,
+			  datasets: [{
+				label: 'Software selection',
+				data: [92,100,94,97.2],
+				backgroundColor: [
+				  'rgba(255, 99, 132, 0.2)',
+				  'rgba(255, 159, 64, 0.2)',
+				  'rgba(75, 192, 192, 0.2)',
+				  'rgba(54, 162, 235, 0.2)',
+				],
+				borderColor: [
+				  'rgba(255, 99, 132, 1)',
+				  'rgba(255, 159, 64, 1)',
+				  'rgba(75, 192, 192, 1)',
+				  'rgba(54, 162, 235, 1)',
+				],
+				borderWidth: 1
+			  }]
+			};
+			Chart.defaults.color = "#005366fc";
+			let chart = new Chart(ctx, {type: 'bar',data: data, options: options});
+		</script>
+	</body>
+</html>

@@ -1,147 +1,103 @@
 <!DOCTYPE html>
 <html lang="it">
 	<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-			<style>
-			@import url(https://fonts.googleapis.com/css?family=Raleway|Reenie+Beanie);
-
-			* {
-				box-sizing: border-box;
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<style>
+			:root {
+			  --blue: #1e90ff;
+			  --white: #ffffff;
 			}
-
-			html,
 			body {
-				margin: 5%;
-				font-family: sans-serif;
-				line-height: 1.5em;
-				background: #f5f5f5;
+			font-family: Lato !important;
 			}
-
-			img {
-				width: 100%;
+			.card:hover {
+				border: solid 2px var(--blue);
 			}
-
-			a {
-				color: #000;
-			}
-
-			.caption,
-			h1 {
-				font-family: monospace;
-				font-size: 2em;
-				padding: 10px 10px 0 10px;
-			}
-
-			.date {
-				font-size: 0.75em;
-			}
-
-			.description {
-				font-size: 0.9em;
-				padding: 0 20px 20px 20px;
-				text-align: left;
-			}
-
-			.container {
-				perspective: 1000px;
-				display: inline-block;
-				margin: 3%;
-			}
-
-			.container:hover .flipper {
-				transform: rotateY(180deg);
-			}
-
-			.container,
-			.front,
-			.back {
-				width: 250px;
-				height: 250px;
-			}
-
-			.flipper {
-				transition: 0.6s;
-				transform-style: preserve-3d;
-				position: relative;
-			}
-
-			.front,
-			.back {
-				backface-visibility: hidden;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 250px;
-				height: 250px;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-							0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			}
-
-			.front {
-				z-index: 2;
-			}
-
-			.back {
-				transform: rotateY(180deg);
-			}
-
-			#content {
-				text-align: center;
-			}
-			</style>
+		</style>
 	</head>
 	<body>
-		<div id="content">
+		<section class="section">
 			<div class="container">
-				<div class="flipper">
-					<div class="front">
-						<img src="https://i.postimg.cc/0j7fX4CK/pngtree-powerpoint-clipart-creator-concept-man-present-diagram-on-white-easel-vector-png-image-68155.png" alt="img">
-						<p class="caption">Creator</p>
+				<div class="columns">
+					<div class="column is-4">
+						<div class="card" onclick="window.open('https://docs.google.com/spreadsheets/d/1CpKijnNnh8LCBzY9Cp2RmxB5WUSlXLv3FfYJgCBqdQQ/edit?usp=sharing')">
+						  <div class="card-image">
+							<figure class="image is-4by3">
+							  <img src="images/softwareselection.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Software selection</p>
+						  </div>
+						</div>
 					</div>
-					<div class="back">
-						<a href="#">
-							<h1>Creator</h1>
-						</a>
-						<p class="description">A creator is someone who makes, invents, or produces something.
-						</p>
+					<div class="column is-4">
+						<div class="card">
+						  <div class="card-image" onclick="window.open('analysis/compare.html')">
+							<figure class="image is-4by3">
+							  <img src="images/short_list.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Short list</p>
+						  </div>
+						</div>
 					</div>
-				</div>
+					<div class="column is-4">
+						<div class="card" onclick="window.open('analysis/confluence.html')">
+						  <div class="card-image">
+							<figure class="image is-4by3">
+							  <img src="images/confluence.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Confluence</p>
+						  </div>
+						</div>
+					</div>
 			</div>
-
-			<div class="container">
-				<div class="flipper">
-					<div class="front">
-						<img src="https://i.postimg.cc/j5cq6xpD/pngtree-web-development-concept-flat-design-png-image-2303316.jpg" alt="img">
-						<p class="caption">Model</p>
+								<div class="columns">
+					<div class="column is-4">
+						<div class="card" onclick="window.open('analysis/nuclino.html')">
+						  <div class="card-image">
+							<figure class="image is-4by3">
+							  <img src="images/nuclino.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Nuclino</p>
+						  </div>
+						</div>
 					</div>
-					<div class="back">
-						<a href="#">
-							<h1>Model</h1>
-						</a>
-						<p class="description">A model structure is a network that exchanges information and is specific to a discipline.
-						</p>
+					<div class="column is-4">
+						<div class="card" onclick="window.open('analysis/sharepoint.html')">
+						  <div class="card-image">
+							<figure class="image is-4by3">
+							  <img src="images/sharepoint.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Sharepoint</p>
+						  </div>
+						</div>
 					</div>
-				</div>
+					<div class="column is-4">
+						<div class="card" onclick="window.open('analysis/drive.html')">
+						  <div class="card-image">
+							<figure class="image is-4by3">
+							  <img src="images/drive.png" alt="Placeholder image">
+							</figure>
+						  </div>
+						  <div class="card-content has-text-centered">
+							<p class="title is-4">Google Drive</p>
+						  </div>
+						</div>
+					</div>
 			</div>
-
-			<div class="container">
-				<div class="flipper">
-					<div class="front">
-						<img src="https://i.postimg.cc/tg0gpmd4/3d-nft-icon-developer-male-illustration-629802-6.avif" alt="img">
-						<p class="caption">Web Designer</p>
-					</div>
-					<div class="back">
-						<a href="#">
-							<h1>Web Designer</h1>
-						</a>
-						<p class="description">A web designer creates the visual elements and layout of websites and web pages.
-						</p>
-					</div>
-				</div>
 			</div>
-		</div>
+		</section>
 	</body>
 </html>
